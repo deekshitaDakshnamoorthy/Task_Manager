@@ -1,0 +1,179 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Tracker</title>
+    <style >
+        body {
+    background-color:rgb(106, 220, 235);
+    background-image: url("");
+    background-size: cover; 
+    justify-content: center;
+    color: rgb(0, 0, 0);
+    margin-top: 5%;
+}
+
+        table {
+            margin-top: 2%;
+            border-collapse:separate;
+            width: 100%;
+        
+        }
+   .start{ 
+    display: flex; 
+            justify-content: space-between; 
+            margin: 20px; 
+   }
+   .div{
+    margin-top: 10px;
+    border-collapse: collapse; 
+            width: 100%; 
+            margin-bottom: 20px; 
+            text-align: center;
+           
+   }
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+           
+        }
+        tr :nth-child(even){
+            background-color:rgb(9, 188, 194);
+          
+        }
+        tr :nth-child(odd){
+            background-color:  #a3c7c4;
+          
+        }
+        .form{
+            /* padding-left: 50%; */
+            margin-top: 2%;
+            padding-top: 5%;
+            padding-bottom: 5%;
+            margin-left: 0%;
+            background-color:  #40b9f1;
+
+           background-image: url("");
+            
+        }
+        .Heading{
+            font-size: xx-large;
+            font-weight: bolder;
+   color:   #341d53 ;
+   justify-content: center;
+   text-align: center;
+        }
+        #sort{
+            margin-left: 22%;
+        }
+        select{
+            text-align: center;
+           
+        }
+       .stask{
+        color:  rgb(255, 255, 255);
+        font-size: 20px;
+        font-weight: bolder;
+       
+        margin-bottom:20px ;
+       }
+       .stopwatch{
+        margin-top: 15px;
+        margin-bottom: 15px;
+        margin-left: 40%;
+        margin-right: 40%;
+        border: 1px solid black;
+        background-color: #c0c0c0;
+       }
+      .button{
+          background-color: azure;
+          color: hsl(9, 100%, 50%);
+          border-radius: 35%;
+          box-shadow: grey;
+       }
+       .button:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+.addtask{
+    background-color: #ADD0B3;
+   
+}
+.addtask:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.update-btn{
+    border-radius: 20%;
+    margin-right: 3px;
+}
+.update-btn:hover{
+    opacity: .7;
+}
+.delete-btn{
+    border-radius: 20%;
+    margin-right: 3px;
+}
+.delete-btn:hover{
+    opacity: .7;
+}
+.submit:hover{
+background-color: #ADD0B3;
+}
+
+    </style>
+
+</head>
+<body>
+    <h1 class="Heading">Task Tracker</h1>
+    
+    <select id="sort">
+        <option>-</option>
+        <option>Meeting</option>
+        <option>Project</option>
+        <option>Personalbreak</option>
+    </select> <br>
+    <div class="start">
+        <div class="div">
+            <table id="dataTable">
+                <thead>
+                    <tr>
+                        <b>
+                        <th>Task</th>
+                        <th>Description</th>
+                        <th>Duration</th>
+                        </b>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+        <div class="div">
+            <form class="form" name="form1">
+                <div class="stask">Start a New Task</div>
+                <label for="category">Category:</label><br>
+                <select id="category" name="category">
+                    <option>Task</option>
+                    <option>Description</option>
+                </select><br>
+                <label for="Task">Task</label><br>
+                <input type="text" id="Task" name="Task"><br>
+                <label for="Description">Description</label><br>
+                <input type="text" id="Description" name="Description" required><br>
+                <label for="duration">Duration</label><br>
+                <input type="text" id="duration" name="duration"><br>
+                <div class="stopwatch">00:00:00</div>
+                <button type="button" class="button" onclick="startStopwatch()">Start</button>
+                <button type="button" class="button" onclick="resetStopwatch()">Reset</button>
+                <br><br>
+                <button type="button" class="addtask" onclick="addTask()">ADD TASK</button>
+            </form>
+        </div>
+    </div>
+    <script src="Main.js"></script>
+</body>
+</html>
+ 
+

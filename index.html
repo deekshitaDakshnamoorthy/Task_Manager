@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('https://img.freepik.com/premium-photo/blue-office-desk-table-with-copy-space-flat-lay_14098-412.jpg?ga=GA1.1.791592628.1720172733&semt=ais_hybrid');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex; /* Use flexbox to center align items */
+            justify-content: center; /* Horizontally center align */
+            align-items: center; /* Vertically center align */
+            height: 100vh; /* Full viewport height */
+            text-align: center; /* Align text content in center */
+            flex-direction: column; /* Stack elements vertically */
+        }
+
+        form {
+            background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+            padding: 20px;
+            border-radius: 10px;
+            width: 300px; /* Set a fixed width for the form */
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: calc(100% - 20px); /* Full width minus padding */
+            padding: 10px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .submit {
+            background-color: rgb(0, 38, 255);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-top: 10px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .submit:hover {
+            background-color: rgb(0, 20, 150);
+        }
+
+        h1 {
+            color: white;
+            margin-bottom: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Login</h1>
+    <form id="submitform">
+        <label for="emailId">Email</label><br>
+        <input type="text" name="emailId" id="emailId"><br>
+        <label for="password">Password</label><br>
+        <input type="password" name="password" id="password"><br>
+        <button class="submit" type="submit">Submit</button>
+    </form>
+    <script src="index.js">
+
+    </script>
+</body>
+
+</html>
